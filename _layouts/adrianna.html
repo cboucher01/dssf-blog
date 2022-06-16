@@ -33,8 +33,16 @@ font-weight: bold;
 <!--this is for the color background block-->
 <div class="hero-background">
 <div class="hero-text">
-<h1 style="font-size:70px; font-family: Arial, Geneva, sans-serif;">Digital Scholarship Summer Fellows 2022</h1>
-<h3><em>Bryn Mawr College</em></h3>
+<h1 style="font-size:70px; font-family: Arial, Geneva, sans-serif;"> 
+     {%- if page.title -%}
+    <h1 class="page-title">
+        {{ page.title }}</h1>
+         {%- endif -%}</h1>
+<h3><em> 
+     {%- if page.subheading -%}
+    <h1 class="page-subheading">
+        {{ page.subheading }}</h1>
+         {%- endif -%}</em></h3>
 </div>
 </div>
 
