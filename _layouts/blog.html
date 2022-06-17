@@ -70,3 +70,62 @@ layout: adrianna
     {%- endif -%}
 
 </div>
+
+<!-- this is where i start the experiment -->
+<body>
+
+  {%- include header.html -%}
+  
+  <style>
+     
+     .hero-background {
+  background-image: url(/creature-icons/blog.jpg);
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position:relative;
+  }
+  .hero-text {
+  text-align:left;
+  position: absolute;
+  top: 65%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: Arial, Verdana, sans-serif;
+  font-weight: bold;
+  }
+  
+  </style>
+  
+  
+  <!--this is for the color background block-->
+  <div class="hero-background">
+  <div class="hero-text">
+  <h1 style="font-size:70px; font-family: Arial, Geneva, sans-serif;"> 
+       {%- if page.title -%}
+      <h1 class="page-title">
+          {{ page.title }}</h1>
+           {%- endif -%}</h1>
+  <h2><em> 
+       {%- if page.subheading -%}
+      <h4 class="page-subheading">
+          {{ page.subheading }}</h1>
+           {%- endif -%}</em></h4>
+  </div>
+  </div>
+  
+  <!--seeing what it looks like if I try to add in my own header-->
+  <!--{%- include header.html -%}-->
+  <main class="page-content" aria-label="Content">
+  <div class="wrapper">
+  {{ content }}
+  </div>
+  </main>
+  
+  {%- include footer.html -%}
+  
+  </body>
+  
+  </html>
