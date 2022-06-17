@@ -1,23 +1,76 @@
----
-layout: default
----
+
+<!-- this where bg code begins -->
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+{%- include head.html -%}
+
+<body>
+
+ {%- include header.html -%}
+
+<style>
+   
+   .hero-background {
+background-image: url(/creature-icons/test.jpg);
+height: 500px;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+position:relative;
+}
+.hero-text {
+text-align:left;
+position: absolute;
+top: 65%;
+left: 80%;
+transform: translate(-50%, -50%);
+color: white;
+font-family: Arial, Verdana, sans-serif;
+font-weight: bold;
+}
+
+</style>
+
+
+<!--this is for the color background block-->
+<div class="hero-background">
+<div class="hero-text">
+<h1 style="font-size:70px; font-family: Arial, Geneva, sans-serif;"> 
+     {%- if page.title -%}
+    <h1 class="page-title">
+        {{ page.title }}</h1>
+         {%- endif -%}</h1>
+<h2><em> 
+     {%- if page.subheading -%}
+    <h4 class="page-subheading">
+        {{ page.subheading }}</h1>
+         {%- endif -%}</em></h4>
+</div>
+</div>
 
 <div class="about">
-    {%- if page.title -%}
-      <h1 class="page-heading">{{ page.title }}</h1>
-    {%- endif -%}
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
 
-    {{ content }}
+  {{ content }}
 
-    <h2>Fellows</h2>
-    
-    {% for fellow in site.fellows %}
-    <h3>
-        <a href="{{ fellow.url }}">
-        {{ fellow.name }}
-        </a>
-    </h3>
-    <p>{{ fellow.description | markdownify }}</p>
-    {% endfor %}
+  <h2>Fellows</h2>
+  
+  {% for fellow in site.fellows %}
+  <h3>
+      <a href="{{ fellow.url }}">
+      {{ fellow.name }}
+      </a>
+  </h3>
+  <p>{{ fellow.description | markdownify }}</p>
+  {% endfor %}
 
 </div>
+
+</body>
+
+</html>
+<!-- this is where bg code ends -->
+
