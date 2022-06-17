@@ -1,5 +1,6 @@
 ---
-layout: about
+layout: adrianna
+subheading: More information about the Fellows
 title: About Us
 permalink: /about/
 ---
