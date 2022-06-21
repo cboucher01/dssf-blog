@@ -12,7 +12,7 @@
 <style>
    
    .hero-background {
-background-image: url(/creature-icons/about.jpg);
+background-image: url(/creature-icons/about-fin.jpg);
 height: 500px;
 background-position: center;
 background-repeat: no-repeat;
@@ -20,7 +20,7 @@ background-size: cover;
 position:relative;
 }
 .hero-text {
-text-align:left;
+text-align:center;
 position: absolute;
 top: 65%;
 left: 80%;
@@ -45,25 +45,32 @@ font-weight: bold;
 </div>
 </div>
 
-<div class="about">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
+<main class="page-content" aria-label="Content">
+  <div class="wrapper">
+    <div class="about">
+      {%- if page.title -%}
+        <h1 class="page-heading">{{ page.title }}</h1>
+      {%- endif -%}
+    
+      {{ content }}
+    
+      <h2>Fellows</h2>
+      
+      {% for fellow in site.fellows %}
+      <h3>
+          <a href="{{ fellow.url }}">
+          {{ fellow.name }}
+          </a>
+      </h3>
+      <p>{{ fellow.description | markdownify }}</p>
+      {% endfor %}
+    
+    </div>
+  </div>
+</main>
 
-  {{ content }}
 
-  <h2>Fellows</h2>
-  
-  {% for fellow in site.fellows %}
-  <h3>
-      <a href="{{ fellow.url }}">
-      {{ fellow.name }}
-      </a>
-  </h3>
-  <p>{{ fellow.description | markdownify }}</p>
-  {% endfor %}
-
-</div>
+{%- include footer.html -%}
 
 </body>
 
