@@ -2,7 +2,7 @@
 title: Arlowe Willingham
 name: Arlowe Willingham
 position: DSSF
-description: Bryn Mawr College
+description: Bryn Mawr College 
 layout: fellow
 list_title: Arlowe's Posts
 ---
