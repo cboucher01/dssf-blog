@@ -1,5 +1,7 @@
 # [DSSF 2022 Blog Site](https://cboucher01.github.io/dssf-blog/)
 
+**Note: This repo may be using an old version of the Webrick gem that has critical security vulnerabilities. This site is no longer being updated or maintained.**
+
 ## Site function
 
 The Digital Scholarship Summer Fellow Blog was a beginner project for the fellows to develop our web-development skills while creating a site to host our blog posts and information about us and the digital web design toolkit that we are currently building. During the coding process, we came across multiple challenges, including aligning our navbar, coordinating work on the site with multiple people using GitHub, organizing our workflow requests, and finally, deploying the site on GitHub. In the future, we are considering adding onto the site to make it a library depot for our learning resources for our future project, the digital web design toolkit. 
